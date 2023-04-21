@@ -1,0 +1,889 @@
+/*
+/*--------
+/* Geral
+/*--------
+*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* border: rebeccapurple 2px solid; */
+}
+
+body {
+  margin: 0;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 17px;
+  color: #333;
+  line-height: 1.6;
+  background: #e2e7d8;
+}
+
+.link {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+/*
+/*--------
+/* Accessibility
+/*--------
+*/
+body:not(.user-is-tabbing) button:focus,
+body:not(.user-is-tabbing) input:focus,
+body:not(.user-is-tabbing) select:focus,
+body:not(.user-is-tabbing) textarea:focus {
+  outline: none;
+}
+
+/*
+/*--------
+/* Navigation
+/*--------
+*/
+.nav-button {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  z-index: 2;
+
+  display: none;
+}
+
+.nav-button:hover {
+  cursor: pointer;
+}
+
+.navigation {
+  position: fixed;
+  width: 100%;
+  margin: auto;
+  line-height: 10vh;
+  z-index: 2;
+
+  background-color: none;
+
+  background-color: rgba(240, 240, 240, 0.8);
+
+  padding-left: 4rem;
+  padding-right: 4rem;
+
+  transition: 500ms;
+}
+
+.navigation-scroll {
+  transition: 500ms;
+  background-color: rgba(240, 240, 240, 0.7);
+}
+
+.logo {
+  /* color: #333; */
+  border: none;
+  /* font-size: 17px; */
+  background: inherit;
+}
+
+.img-logo {
+  height: 10vh;
+  width: auto;
+  padding-top: 10px;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  padding-left: 2rem;
+}
+
+.menu-button {
+  color: #666;
+  border: none;
+  font-size: 17px;
+  background: inherit;
+}
+
+.menu-button:hover {
+  cursor: pointer;
+}
+
+.menu-button-selected {
+  color: #333;
+  font-weight: 500;
+}
+
+.bar-icon {
+  height: 2em;
+}
+
+/*
+/*--------
+/* Landing page background
+/*--------
+*/
+.showcase::after {
+  content: "";
+  height: 100vh;
+  width: 100%;
+  display: block;
+
+  background-image: url("./assets/nutrition.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* filter: blur(2px); */
+  opacity: 0.4;
+}
+
+/*
+/*--------
+/* Landing page content
+/*--------
+*/
+.content {
+  /* border: red 2px solid; */
+  text-align: justify;
+
+  position: absolute;
+  z-index: 1;
+  top: 20vh;
+  padding-left: 80vh;
+  padding-right: 20vh;
+}
+
+.content h1 {
+  text-align: left;
+  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans",
+    "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 5rem;
+  margin-top: 1rem;
+}
+
+.content .text {
+  /* font-family: "merriweather"; */
+  line-height: 1.7;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  margin-right: 5rem;
+}
+
+/*
+/*--------
+/* Layout
+/*--------
+*/
+.button {
+  transition-duration: 0.4s;
+  font-size: 1.4rem;
+  text-decoration: none;
+  font-weight: 500;
+  color: #fff;
+  padding: 12px 20px;
+  background-color: #5f7b32;
+}
+
+.button:hover {
+  background-color: #869966;
+
+  cursor: pointer;
+}
+
+.container {
+  max-width: 150vh;
+  margin: auto;
+  overflow: hidden;
+  padding: 3rem 1rem;
+}
+
+.grid-2 {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.center {
+  text-align: center;
+  margin: auto;
+}
+
+/*
+/*--------
+/* About
+/*--------
+*/
+.about {
+  background-color: #acbe84;
+}
+
+.about .img-about {
+  width: 55%;
+  height: 55%;
+  border-radius: 50%;
+}
+
+.about .about-me {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.about-text {
+  font-size: 1.1rem;
+}
+
+/*
+/*--------
+/* Blog
+/*--------
+*/
+.blog {
+  background-color: #fafafa;
+  padding: 1rem;
+}
+
+.blog-posts {
+  border: #333 1px solid;
+  height: auto;
+  width: auto;
+  /* background-color: #fafafa; */
+}
+
+.blog-posts .posts-caption {
+  font-size: 1.5rem;
+  margin-top: -18px;
+  background: #fafafa;
+  width: max-content;
+  padding-left: 11px;
+  padding-right: 11px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  text-justify: center;
+}
+
+.blog-posts .post {
+  text-align: center;
+  padding: 30px;
+}
+
+.blog-posts .post-image {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.blog-posts .post-link {
+  text-decoration: none;
+}
+
+.blog-posts .post-title {
+  color: #333;
+}
+
+.blog-posts .blog-link {
+  text-align: center;
+  height: auto;
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+.blog-button {
+  background-color: #705397;
+}
+
+.blog-button:hover {
+  background-color: #9582ad;
+}
+
+/*
+/*--------
+/* Contact
+/*--------
+*/
+.contact {
+  background: #a692c3;
+}
+
+.contact-label {
+  /* padding-left: 4rem; */
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.contact-form {
+  display: block;
+  text-align: center;
+  /* border: red 2px solid; */
+  padding: 1rem;
+  width: 70%;
+  margin: auto;
+}
+
+.form-label {
+  display: none;
+  line-height: 2;
+  float: left;
+  padding-left: 1rem;
+  font-weight: bold;
+}
+
+.form-input {
+  display: block;
+  margin: auto;
+  width: 100%;
+  line-height: 2;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding-left: 5px;
+  font-size: 16px;
+}
+
+textarea {
+  resize: none;
+  height: 200px;
+}
+
+textarea::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+textarea::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+.subject {
+  /* line-height: 80px; */
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.feedback {
+  font-weight: bold;
+  text-align: center;
+  height: 1.5rem;
+}
+
+.submit-form {
+  text-decoration: none;
+  font-weight: 500;
+  border: none;
+}
+
+/*
+/*--------
+/* Find me
+/*--------
+*/
+.find-me {
+  background: #fafafa;
+}
+.map {
+  height: 40vh;
+  width: 80%;
+  /* background-color: grey; */
+}
+
+.other-contact {
+  margin-left: 6rem;
+  text-align: left;
+}
+
+.find-me-text {
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.media-icon {
+  height: 2rem;
+  pointer-events: none;
+}
+
+.media-link {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.social-media-list {
+  height: 100%;
+}
+
+.social-media-item {
+  padding: 0;
+  padding-top: 3%;
+  line-height: 40px;
+  font-size: 25px;
+}
+
+.social-media {
+  font-size: 20px;
+  margin: 20px;
+}
+
+/*
+/*--------
+/* Footer
+/*--------
+*/
+.footer {
+  color: #f4f4f4;
+  background-color: #333;
+  padding: 15px;
+}
+
+/* 1440p */
+@media (max-width: 1600px) {
+  .content {
+    top: 21vh;
+  }
+
+  .content h1 {
+    text-align: left;
+    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans",
+      "Helvetica Neue", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 4rem;
+    margin-top: 1rem;
+  }
+
+  .content .text {
+    /* font-family: "merriweather"; */
+    line-height: 1.3;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    margin-right: 5rem;
+  }
+
+  .button {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+  }
+
+  .about .img-about {
+    width: 60%;
+    height: 60%;
+    /* margin-left: 7rem; */
+    border-radius: 50%;
+  }
+
+  .about {
+    font-size: 18px;
+  }
+
+  .about .about-me {
+    font-size: 20px;
+  }
+
+  .find-me-text {
+    font-size: 20px;
+    padding-bottom: 1rem;
+    /* margin-left: 2rem; */
+    /* font-size: 24px; */
+  }
+
+  .blog-posts .posts-caption {
+    font-size: 20px;
+  }
+
+  .contact-label {
+    font-size: 20px;
+  }
+}
+
+/*
+/*--------
+/* Tablets
+/*--------
+*/
+@media (max-width: 1025px) {
+  .showcase::after {
+    height: 60vh;
+  }
+
+  .img-logo {
+    height: 10vh;
+    width: 11vh;
+    object-fit: cover;
+    object-position: 0% 0;
+    padding-top: 10px;
+    /* margin-right: 15vw; */
+  }
+
+  .content {
+    top: 15%;
+    padding-left: 40vw;
+    padding-right: 5vw;
+  }
+
+  .blog-posts .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .blog-posts .post:last-child {
+    display: none;
+  }
+
+  .map {
+    height: 25vh;
+    width: 90%;
+    padding-top: 2rem;
+  }
+
+  .media-icon {
+    height: 1em;
+  }
+}
+
+@media (max-width: 800px) {
+  .content {
+    /* border: red 2px solid; */
+
+    top: 15%;
+    padding-left: 40vw;
+    padding-right: 5vw;
+  }
+
+  .showcase::after {
+    height: 65vh;
+  }
+
+  .content h1 {
+    margin-bottom: 4rem;
+  }
+
+  .content .text {
+    display: none;
+  }
+
+  .img-logo {
+    height: 10vh;
+    width: 10.5vh;
+    object-fit: cover;
+    object-position: 0% 0;
+    padding-top: 10px;
+    margin-right: 10vw;
+  }
+  .menu {
+    margin-left: 10vw;
+  }
+
+  .main-nav {
+    justify-content: center;
+  }
+
+  .social-media {
+    font-size: 15px;
+    margin: 20px;
+    /* vertical-align: middle; */
+  }
+}
+
+/*
+/*--------
+/* Small screens
+/*--------
+*/
+@media (max-width: 560px) {
+  .navigation {
+    /* padding: 10px 4rem; */
+    height: max-content;
+    /* border: red 2px solid; */
+    background-color: rgba(250, 250, 250, 0.8);
+  }
+
+  .main-nav {
+    margin-top: 1%;
+    justify-content: space-between;
+  }
+
+  i {
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+
+  .nav-button {
+    margin: 0px;
+    padding: 0px;
+    display: inline-flex;
+    /* border: red 2px solid; */
+    /* position: fixed; */
+    line-height: inherit;
+    font-size: 3vh;
+  }
+
+  .main-nav ul.menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #f2f2f2;
+    width: 80%;
+    height: 100%;
+    border-right: #ccc 1px solid;
+    padding: 30px;
+    margin-left: 0vw;
+
+    z-index: 50;
+    opacity: 0.95;
+
+    transform: translateX(-500px);
+    transition: transform 500ms;
+  }
+
+  .main-nav ul.menu li {
+    padding: 10px;
+    border-bottom: #ccc solid 1px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .dark-overlay {
+    width: 0;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0);
+    position: fixed;
+    transition: background-color 250ms;
+  }
+
+  .dark-overlay-on {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100vw;
+    height: 100vh;
+    /* position: fixed; */
+  }
+
+  .main-nav ul.menu.show {
+    transform: translateX(-20px);
+  }
+
+  .nav-button:hover {
+    opacity: 0.5;
+  }
+
+  .logo {
+    /* border: red 2px solid; */
+    margin: auto;
+  }
+
+  .img-logo {
+    margin-right: 0;
+    height: 10vh;
+    width: 10.5vh;
+    object-fit: cover;
+    object-position: 0% 0;
+    padding-top: 10px;
+  }
+
+  .showcase::after {
+    height: 75vh;
+    filter: blur(1px);
+  }
+
+  .content {
+    /* border: rebeccapurple 2px solid; */
+    top: 20%;
+    margin-top: 0;
+    padding-left: 24vw;
+    padding-right: 1vw;
+    text-align: center;
+  }
+
+  .content h1 {
+    /* text-align: center; */
+    /* border: red 2px solid; */
+    padding-left: 8vw;
+
+    font-size: 10vw;
+    margin-bottom: 40px;
+  }
+
+  .content .button {
+    margin-top: 20px;
+    font-size: 5vw;
+
+    left: 0;
+  }
+
+  .content .text {
+    display: none;
+    max-width: 100px;
+  }
+
+  .container {
+    padding: 2rem 1rem;
+  }
+
+  .grid-2 {
+    display: block;
+  }
+
+  .grid-3 {
+    display: block;
+  }
+
+  .services i {
+    margin-top: 20px;
+  }
+
+  .service .icon-first {
+    margin-top: 0px;
+  }
+
+  .about .img-about {
+    align-self: center;
+    border-radius: 50%;
+  }
+
+  .about-me-section {
+    margin: 0 3vw;
+  }
+
+  .about-me {
+    text-align: center;
+  }
+
+  .about .about-text {
+    text-align: center;
+  }
+
+  .blog .container-blog {
+    padding: 2rem 0.3rem;
+  }
+
+  .blog-posts .post:last-child {
+    display: block;
+  }
+
+  .blog-link .button {
+    margin-bottom: 30px;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+
+  .contact-label {
+    padding: 0;
+    width: max-content;
+    margin: auto;
+  }
+
+  .submit-form {
+    text-decoration: none;
+    font-weight: 500;
+    border: none;
+    margin-top: 2rem;
+  }
+
+  .map {
+    height: 40vh;
+    width: 90%;
+    padding-top: 2rem;
+  }
+
+  .other-contact {
+    margin-left: 0;
+    text-align: center;
+    margin: auto;
+  }
+
+  .find-me-text {
+    padding-top: 2rem;
+    margin-left: 0;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .media-icon {
+    height: 2.3rem;
+  }
+
+  .social-media {
+    font-size: 18px;
+    margin: 20px;
+    display: none;
+  }
+
+  .social-media-list {
+    height: 100%;
+    margin-left: 0;
+    text-align: center;
+    padding: 1rem 3rem;
+    justify-content: space-between;
+    display: flex;
+  }
+
+  /* .footer {
+    margin-top: 1rem;
+  } */
+}
+
+/*
+/*--------
+/* Landscape
+/*--------
+*/
+@media (max-height: 500px) {
+  .showcase::after {
+    height: 80vh;
+  }
+
+  .content {
+    top: 10%;
+    padding-left: 15vh;
+    padding-right: 15vh;
+  }
+
+  .content .text {
+    display: none;
+  }
+
+  .grid-2 {
+    display: block;
+  }
+
+  .about-me {
+    text-align: center;
+  }
+
+  .about .about-text {
+    text-align: center;
+  }
+
+  .blog-posts .grid-3 {
+    display: block;
+  }
+}

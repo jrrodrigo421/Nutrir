@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script type="text/javascript" src="./index.js"></script>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <title>Nutrir</title>
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <div class="navigation">
+      <nav class="main-nav">
+        <button class="logo" onclick="scrollToHome()">
+          <img src="assets/nutrir.png" alt="" class="img-logo" />
+        </button>
+        <ul class="menu">
+          <li>
+            <button
+              onclick="scrollToHome()"
+              class="menu-button menu-home menu-button-selected"
+            >
+              Home
+            </button>
+          </li>
+          <li>
+            <button onclick="scrollToAbout()" class="menu-button menu-about">
+              Sobre mim
+            </button>
+          </li>
+          <li>
+            <button onclick="scrollToBlog()" class="menu-button menu-blog">
+              Blog
+            </button>
+          </li>
+          <li>
+            <button
+              onclick="scrollToContact()"
+              class="menu-button menu-contact"
+            >
+              Contato
+            </button>
+          </li>
+        </ul>
+      </nav>
+
+      <img src="assets/icons/bars.svg" type="image/svg+xml" class="bar-icon nav-button" />
+    </div>
+
+    <div class="dark-overlay"></div>
+
+    <!-- Landing Page -->
+    <header class="showcase center">
+      <div class="content">
+        <h1>Nutrir</h1>
+        <div class="text">
+          Nutricionista e Fitoterapeuta amante da nutrição e a capacidade que
+          ela tem de fazer o bem, seja na saúde, na estética ou qualidade de
+          vida.
+        </div>
+        <a href="" class="button" target="_blank">Agende sua consulta »</a>
+      </div>
+    </header>
+
+    <!-- About -->
+    <section class="about">
+      <div class="container">
+        <div class="grid-2">
+          <div class="center">
+            <img src="assets/nutri.jpeg" alt="" class="img-about" />
+          </div>
+          <div class="about-me-section">
+            <h3 class="about-me">Sobre mim</h3>
+            <p class="about-text">
+              Olá! 
+              Sou nutricionista
+              especializada em fitoterapia funcional, profissão que escolhi e
+              exerço com todo o carinho e dedicação.
+              <br /><br />
+              Sempre fui apaixonada por tudo que envolve a nutrição, e fascinada
+              pelo poder que os alimentos possuem de transformar cada célula do
+              nosso corpo.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog -->
+    <section class="blog">
+      <div class="container container-blog">
+        <div class="blog-posts">
+          <h3 class="posts-caption">Últimas Postagens</h3>
+          <div class="grid-3">
+            <div class="post">
+              <a href="" class="post-link first-link" target="_blank">
+                <img
+                  src="assets/post-img-1.jpg"
+                  class="post-image first-image"
+                />
+                <h4 class="post-title first-title">
+                  BOMBOM DE MORANGO ZERO AÇÚCAR PARA O DIA DOS NAMORADOS
+                </h4>
+              </a>
+            </div>
+            <div class="post">
+              <a href="" class="post-link second-link" target="_blank">
+                <img
+                  src="assets/post-img-2.jpg"
+                  class="post-image second-image"
+                />
+                <h4 class="post-title second-title">
+                  COMO O SEU CORPO ESTÁ RESPONDENDO A PANDEMIA?
+                </h4>
+              </a>
+            </div>
+            <div class="post">
+              <a href="" class="post-link third-link" target="_blank">
+                <img
+                  src="assets/post-img-3.jpg"
+                  class="post-image third-image"
+                />
+                <h4 class="post-title third-title">
+                  PLANEJAMENTO NO CONFINAMENTO
+                </h4>
+              </a>
+            </div>
+          </div>
+          <div class="blog-link">
+            <a
+              href=""
+              class="button blog-button"
+              target="_blank"
+              >Leia mais »</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact">
+      <div class="container">
+        <h3 class="contact-label">Entre em contato</h3>
+
+        <form>
+          <div class="contact-form">
+            <label for="name" class="form-label">Nome</label>
+            <input
+              type="text"
+              class="name form-input"
+              name="firstname"
+              placeholder="Seu nome"
+            />
+          </div>
+          <div class="contact-form">
+            <label for="email" class="form-label">Email</label>
+            <input
+              type="text"
+              class="email form-input"
+              name="email"
+              placeholder="Seu email"
+            />
+          </div>
+          <div class="contact-form">
+            <label for="subject" class="form-label">Mensagem</label>
+            <textarea
+              class="subject form-input"
+              name="subject "
+              placeholder="Escreva sua mensagem"
+            ></textarea>
+          </div>
+
+          <div class="feedback feedback-correct"></div>
+
+          <div class="contact-form">
+            <input type="submit" class="submit-form button" value="Enviar" />
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Find me -->
+    <section class="find-me">
+      <div class="container">
+        <div class="grid-2">
+          <div class="map center">
+          </div>
+          <div class="other-contact center">
+            <h3 class="find-me-text">Onde me encontrar</h3>
+            <ul class="social-media-list">
+              <a href="" class="media-link" target="_blank" >
+                <li class="social-media-item">
+                  <object data="./assests/icons/instagram.svg" type="image/svg+xml" class="media-icon"></object>
+                  <span class="social-media">@nutri</span>
+                </li>
+              </a>
+              <a href="" class="media-link" target="_blank">
+                <li class="social-media-item">
+                  <object data="./assests/icons/facebook.svg" type="image/svg+xml" class="media-icon"></object>
+                  <span class="social-media">/nutricionista</span>
+                </li>
+              </a>
+              <a href="" class="media-link" target="_blank">
+                <li class="social-media-item">
+                  <object data="./assests/icons/email.svg" type="image/svg+xml" class="media-icon"></object>
+                  <span class="social-media">nutricionista@gmail.com </span>
+                </li> 
+              </a>
+              <a href="" class="media-link" target="_blank">
+                <li class="social-media-item">
+                  <object data="./assests/icons/phone.svg" type="image/svg+xml" class="media-icon"></object>
+                  <span class="social-media">(55) 99999999 </span>
+                </li>
+              </a>
+            </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="center footer">
+      <p class="footer-text">Nutrir &copy; 2023</p>
+    </footer>
+
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmTpDvXZANWrTPNcpQhnls2JYa4OKQSgk&callback=initMap"
+    ></script>
+  </body>
+</html>

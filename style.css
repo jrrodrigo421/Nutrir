@@ -198,11 +198,11 @@ ul li {
   font-weight: 500;
   color: #fff;
   padding: 12px 20px;
-  background-color: #5f7b32;
+  background-color: #7904af;
 }
 
 .button:hover {
-  background-color: #869966;
+  background-color: #43ae53;
 
   cursor: pointer;
 }
@@ -237,7 +237,7 @@ ul li {
 /*--------
 */
 .about {
-  background-color: #acbe84;
+  background-color: #79ac0a;
 }
 
 .about .img-about {
@@ -312,11 +312,11 @@ ul li {
 }
 
 .blog-button {
-  background-color: #705397;
+  background-color: #7904af;
 }
 
 .blog-button:hover {
-  background-color: #9582ad;
+  background-color: #43ae53;
 }
 
 /*
@@ -325,7 +325,7 @@ ul li {
 /*--------
 */
 .contact {
-  background: #a692c3;
+  background: #79ac0a;
 }
 
 .contact-label {
@@ -458,7 +458,7 @@ textarea::-webkit-scrollbar-thumb {
 */
 .footer {
   color: #f4f4f4;
-  background-color: #333;
+  background-color: #79ac0a;
   padding: 15px;
 }
 

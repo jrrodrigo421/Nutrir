@@ -303,7 +303,7 @@ window.addEventListener("load", () => initMap());
 function setFooterText() {
   const currentYear = new Date().getFullYear();
 
-  const footerText = `Nutrir Com Tempero &copy; ${currentYear}`
+  const footerText = `Nutrir &copy; ${currentYear}`
 
   document.querySelector(".footer-text").innerHTML = footerText;
 }
